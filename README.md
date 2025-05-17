@@ -1,4 +1,4 @@
-![Login Screen](frontend/src/assets/login.png)
+![Login Screen](frontend/my-project/src/assets/login.png)
 # Real-Time Chat Application with Sentiment Analysis
 
 A real-time chat application with built-in sentiment analysis using React.js, Socket.io, MongoDB, and Node-NLP.
