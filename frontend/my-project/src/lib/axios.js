@@ -1,0 +1,6 @@
+// setting up the axios default url
+import axios from 'axios'
+export const axiosInstance =axios.create({
+    baseURL:"http://localhost:5001/api",
+    withCredentials:true
+})
