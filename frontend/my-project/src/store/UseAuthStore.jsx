@@ -4,7 +4,7 @@ import { axiosInstance } from "../lib/axios";
 import toast from "react-hot-toast";
 import { io } from "socket.io-client";
 
-const BASE_URL = import.meta.env.MODE === "development" ? "http://localhost:5000" : "/";
+const BASE_URL = import.meta.env.MODE === "development" ? "https://chatappbackend-7t5n.onrender.com" : "/";
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
