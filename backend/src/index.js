@@ -14,7 +14,7 @@ const PORT=process.env.PORT || 5000;
 app.use(express.json({ limit: '1mb' })); // increase to 1 MB or more
 app.use(cookieParser());
 app.use(cors(
-    {origin:"http://localhost:5173",
+    {origin:"https://chatapp-xkpe.onrender.com",
     credentials:true
 }
 ))
