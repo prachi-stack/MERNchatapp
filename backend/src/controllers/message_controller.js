@@ -50,26 +50,26 @@ export const sendMessage = async (req, res) => {
       imageUrl = uploadResponse.secure_url;
     }
     // Sentiment analysis logic
-    let sentiment = 'neutral';
-    let sentimentScore = 0;
+    // let sentiment = 'neutral';
+    // let sentimentScore = 0;
 
-    if (text) {
-      const result = await manager.process('en', text);
-      sentimentScore = result.sentiment.score;
-      sentiment =
-        result.sentiment.vote === 'positive'
-          ? 'positive'
-          : result.sentiment.vote === 'negative'
-            ? 'negative'
-            : 'neutral';
-    }
+    // if (text) {
+    //   const result = await manager.process('en', text);
+    //   sentimentScore = result.sentiment.score;
+    //   sentiment =
+    //     result.sentiment.vote === 'positive'
+    //       ? 'positive'
+    //       : result.sentiment.vote === 'negative'
+    //         ? 'negative'
+    //         : 'neutral';
+    // }
     const newMessage = new Message({
       senderId,
       receiverId,
       text,
       image: imageUrl,
-      sentiment,
-      sentimentScore,
+      // sentiment,
+      // sentimentScore,
     });
     await newMessage.save();
 
